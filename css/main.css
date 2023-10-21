@@ -108,7 +108,6 @@ img {
 /*==========================================ATTRACTIONS + description====================================================*/
 .flex-container {
   max-width: 100%;
-  height: auto;
   justify-items: center;
   margin: 15px auto;
   text-align: justify;
@@ -218,37 +217,82 @@ img {
 /*========================================for accommodations=================================================*/
 
 .block {
+  max-width: 100%;
+  text-align: justify;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 10px;
-  padding: 10px;
   border: #ff5722 solid 2px;
   border-radius: 15px;
 }
+.event-flex-cont{
+  padding: 0 15px;
+  justify-content: center;
+  gap: 30px;
+  display: flex;
+  flex-wrap: nowrap
+}
+
+
 
 .divImg {
-  width: 130px;
-  height: 130px;
+  max-width: 90%;
 }
 
-.titleBtn {
-  flex: 1;
-  margin-top: 10px;
-  text-align: center;
+.titleBtn  {
+  gap: 15px;
+  margin: 15px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .block {
+      max-width: 100%;
+      display: flex;
       flex-direction: column;
       align-items: center;
   }
-
+  .event-flex-cont{
+    text-align: justify;
+    padding: 0 15px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap
+  }
   .divImg {
+      max-width:40%;
       margin-top: 10px;
   }
 }
+
+@media screen and (max-width: 720px){
+  .block {
+    max-width: 100% ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .event-flex-cont{
+    text-align: justify;
+    padding: 0 15px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap
+  }
+  .divImg {
+    max-width:70% ;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+}
+
 
 /*========================================buttons under description=================================================*/
 
@@ -264,10 +308,11 @@ justify-content: center;
 
 .buttons div {
   text-align: center;
-  justify-content: center;
+  justify-content: space-between;
   margin-bottom: 15px;
   max-width: 100%;
   display: flex;
+  flex-wrap: wrap;
   padding: 5px;
 }
 @media screen and (max-width: 768px){
@@ -279,6 +324,14 @@ justify-content: center;
     display: flex;
     flex-wrap: wrap;
   }
+  .buttons div {
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;}
 }
 @media screen and (max-width: 1442px){
   .buttons{
